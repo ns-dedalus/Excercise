@@ -17,34 +17,46 @@ public class EmployeeView {
 		
 		String prompt = null;
 		
-		do {
-			System.out.println("1. Add Employee\r\n2. View Employee\r\n3. Save Employee \r\n4. Load Employee");
-			int opt = sc.nextInt();
-			switch (opt) {
-				case 1: {
-					c.addEmployee();
-					break;
+		
+		System.out.println("Enter the username");
+		String username = sc.next();
+		System.out.println("Enter the password");
+		String password = sc.next();
+		
+		if (username.equals(password)) {
+			do {
+				System.out.println("1. Add Employee\r\n2. View Employee\r\n3. Save Employee \r\n4. Load Employee");
+				int opt = sc.nextInt();
+				switch (opt) {
+					case 1: {
+						c.addEmployee();
+						break;
+					}
+					case 2: {
+						c.viewEmployee();
+						break;
+					}
+					case 3: {
+						c.saveEmployee();
+						break;
+					}
+					case 4: {
+						c.loadEmployee();
+						break;
+					}
+					default:
+						break;
 				}
-				case 2: {
-					c.viewEmployee();
-					break;
-				}
-				case 3: {
-					c.saveEmployee();
-					break;
-				}
-				case 4: {
-					c.loadEmployee();
-					break;
-				}
-				default:
-					break;
-			}
+				
+				System.out.println("Continue (Y)es?");
+				prompt = sc.next();
+				
+			} while (prompt.equalsIgnoreCase("Y"));
 			
-			System.out.println("Continue (Y)es?");
-			prompt = sc.next();
-			
-		} while (prompt.equalsIgnoreCase("Y"));
+		}
+		else {
+			System.out.println("Unauthorized access");
+		}
 		
 		System.out.println("Application ended");
 
