@@ -1,0 +1,20 @@
+//Create instance and local variable inside the inner class and access
+Instance variable of inner class can able to access through instance of inner class or inside the inner class.
+local variable of inner class can access only inside method.
+
+// Can the method local inner class be abstract?
+No, inner class method cannot be abstract.
+since inner class is not abstract class.
+
+// Check whether the inner class can be abstract
+yes. inner can be abstract
+
+// can it be inherited?
+yes. can inner class inherited another class
+
+// scope of instance variable within the inner class 
+scope is inside the inner class
+
+// scope of local variable within the inner class
+Scope is inside the method
+
